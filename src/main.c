@@ -32,5 +32,6 @@ bool doubleNumFormatable(char *numStr) {
 int main() {
     printf("Hello World\n");
     printf("%s", intNumFormatable("12, 445, 3"));
+    printf("\nHello World!");
     return 0;
 }
