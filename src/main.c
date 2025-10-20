@@ -22,7 +22,7 @@ bool doubleNumFormatable(char *numStr) {
             continue;
         }
 
-        if (dots >= 2 || str[i] < 48 || str[i] > 57)
+        if (dots >= 2 || numStr[i] < 48 || numStr[i] > 57)
             return false;
     }
 
