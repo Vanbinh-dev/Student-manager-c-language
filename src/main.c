@@ -19,7 +19,7 @@ bool doubleNumFormatable(char *numStr) {
     for (i; i < strlen(numStr); i++) {
         if (numStr[i] == '.') {
             dots++;
-            continue;
+            continue;   
         }
 
         if (dots >= 2 || numStr[i] < 48 || numStr[i] > 57)
@@ -30,6 +30,7 @@ bool doubleNumFormatable(char *numStr) {
 }
 
 int main() {
-    printf("Hello World");
+    printf("Hello World\n");
+    printf("%s", intNumFormatable("12, 445, 3"));
     return 0;
 }
