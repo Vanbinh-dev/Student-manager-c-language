@@ -1,4 +1,4 @@
-Học về git.
+Học về git. -ok 
 Học thêm các kiểu dữ liệu liên quan.
 Học về chuẩn utf8 trong c, tức encode và decode.
 Học về mã hóa.
