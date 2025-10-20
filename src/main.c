@@ -3,11 +3,13 @@
 #include <stdbool.h>
 #include <string.h>
 
-bool intNumFormatable(char *numStr) {   
+bool intNumFormatable(char *numStr) {
     int i = (numStr[0] == '-') ? 1 : 0;
-    for (i; i < strlen(numStr); i++)
+    while (i < strlen(numStr)) {
         if (numStr[i] < 48 || numStr[i] > 57)
             return false;
+        i++;
+    }
 
     return true;
 }
@@ -16,22 +18,21 @@ bool doubleNumFormatable(char *numStr) {
     short dots = 0;
     int i = (numStr[0] == '-') ? 1 : 0;
 
-    for (i; i < strlen(numStr); i++) {
+    while (i < strlen(numStr)) {
         if (numStr[i] == '.') {
             dots++;
-            continue;   
+            continue;
         }
 
         if (dots >= 2 || numStr[i] < 48 || numStr[i] > 57)
             return false;
+
+        i++;
     }
 
     return true;
 }
 
 int main() {
-    printf("Hello World\n");
-    printf("%s", intNumFormatable("12, 445, 3"));
-    printf("\nHello World!");
     return 0;
 }
