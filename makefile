@@ -1,6 +1,6 @@
 # Compiler và flags
 CC = gcc
-CFLAGS = -Wall -std=c11 -I$(INCLUDE_DIR)
+CFLAGS = -Wall -Wextra -std=c11 -I$(INCLUDE_DIR)
 LDFLAGS = 
 
 # Phát hiện hệ điều hành

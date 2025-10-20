@@ -2,37 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-
-bool intNumFormatable(char *numStr) {
-    int i = (numStr[0] == '-') ? 1 : 0;
-    while (i < strlen(numStr)) {
-        if (numStr[i] < 48 || numStr[i] > 57)
-            return false;
-        i++;
-    }
-
-    return true;
-}
-
-bool doubleNumFormatable(char *numStr) {
-    short dots = 0;
-    int i = (numStr[0] == '-') ? 1 : 0;
-
-    while (i < strlen(numStr)) {
-        if (numStr[i] == '.') {
-            dots++;
-            continue;
-        }
-
-        if (dots >= 2 || numStr[i] < 48 || numStr[i] > 57)
-            return false;
-
-        i++;
-    }
-
-    return true;
-}
+#include <locale.h>
+#include <windows.h>
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    
+    printf("Ok build ổn!");
     return 0;
 }
