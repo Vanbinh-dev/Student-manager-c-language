@@ -30,6 +30,5 @@ bool doubleNumFormatable(char *numStr) {
 }
 
 int main() {
-    printf("Hello World");
     return 0;
 }
