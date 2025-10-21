@@ -1,22 +1,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
 #include "../include/validation.h"
 
-bool intNumFormatable(char *numStr) {
+short intNumFormatable(char *numStr) {
     int i = (numStr[0] == '-') ? 1 : 0;
     while (i < strlen(numStr)) {
         if (numStr[i] < 48 || numStr[i] > 57)
-            return false;
+            return 0;
         i++;
     }
 
-    return true;
+    return 1;
 }
 
-bool doubleNumFormatable(char *numStr) {
+short doubleNumFormatable(char *numStr) {
     short dots = 0;
     int i = (numStr[0] == '-') ? 1 : 0;
 
@@ -27,10 +26,14 @@ bool doubleNumFormatable(char *numStr) {
         }
 
         if (dots >= 2 || numStr[i] < 48 || numStr[i] > 57)
-            return false;
+            return 0;
 
         i++;
     }
 
-    return true;
+    return 1;
+}
+
+short birthDayValidated(char *birthDay) {
+    return 0;
 }

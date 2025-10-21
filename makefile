@@ -1,6 +1,6 @@
 # Compiler và flags
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11 -I$(INCLUDE_DIR)
+CFLAGS = -Wall -std=c11 -I$(INCLUDE_DIR) -finput-charset=UTF-8 -fexec-charset=UTF-8
 LDFLAGS = 
 
 # Phát hiện hệ điều hành

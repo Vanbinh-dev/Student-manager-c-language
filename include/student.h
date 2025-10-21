@@ -18,6 +18,7 @@ typedef enum {
 
 typedef struct {
     char id[8];
+    char *name;
     short age;
     Gender gender;
     char birthDay[8];
