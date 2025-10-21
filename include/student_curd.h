@@ -4,7 +4,6 @@
 #include "student.h"
 
 void setup();
-char *newId();
 void endCURD();
 
 void addStudent();

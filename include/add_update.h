@@ -3,6 +3,6 @@
 
 #include "student.h"
 
-Student *newStudent();
+Student newStudent();
 
 #endif

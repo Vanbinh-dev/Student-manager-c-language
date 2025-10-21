@@ -17,12 +17,12 @@ typedef enum {
 } StudyStatus;
 
 typedef struct {
-    char id[8];
+    char *id;
     char *name;
     short age;
     Gender gender;
-    char birthDay[8];
-    char *phoneNum[11];
+    char *birthday;
+    char *phoneNum;
     float gpa;
     Major major;
     StudyStatus status;

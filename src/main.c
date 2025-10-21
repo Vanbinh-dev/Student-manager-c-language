@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "../include/student_curd.h"
+#include "../include/validation.h"
 
 int main() {
-    setup();
-    endCURD();
+    char name[] = "Nguyen Van A";
+    char not_Name[] = "N23 ";
+    printf("%d\n", nameValidated(name));
+    printf("%d", nameValidated(not_Name));
+
     return 0;
 }
