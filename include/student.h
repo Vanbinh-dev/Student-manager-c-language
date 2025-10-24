@@ -1,6 +1,11 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
+char *newId();
+char *getGenderName(int value);
+char *getStudyStatusName(int value);
+char *getMajorName(int value);
+
 typedef enum {MALE, FEMALE} Gender;
 
 typedef enum {
@@ -21,8 +26,6 @@ typedef struct {
     char *name;
     short age;
     Gender gender;
-    char *birthday;
-    char *phoneNum;
     float gpa;
     Major major;
     StudyStatus status;
