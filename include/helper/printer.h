@@ -1,9 +1,10 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-#include "student.h"
+#include "../model/student.h"
 
 void printLine();
+void printChoice();
 void printStudent(Student student);
 
 void printGenderList();

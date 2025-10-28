@@ -1,14 +1,30 @@
-#include "../include/print.h"
+#include "../../include/helper/printer.h"
+
+#include "../../include/model/student.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
 void printLine() {
-    printf("+-----------+-------------------------------------+-----+--------+-------+----------------------------------------+\n");
+    printf("+-----------+-------------------------------------+-----+--------+--------------------------------------------------+\n");
+}
+
+void printChoice() {
+    printf("\n");
+    printf("| %s\n", "STUDENT MANAGEMENT SYSTEM");
+    printLine();
+    printf("| %s\n", "[1] Xem danh sách sinh viên");
+    printf("| %s\n", "[2] Thêm sinh viên");
+    printf("| %s\n", "[3] Sửa thông tin sinh viên");
+    printf("| %s\n", "[4] Xóa sinh viên");
+    printf("| %s\n", "[5] Tìm kiếm sinh viên");
+    printf("| %s\n", "[0] Thoát chương trình");
+   
+    printf("\n");
 }
 
 void printStudent(Student s) {
-    printf("| %-8s | %-35s | %3d | %-5s | %5.2lf | %-23s | %-13s |\n", 
+    printf("|  %-9s | %-35s | %3d | %-5s | %5.2lf | %-23s | %-13s |\n", 
        s.id, 
        s.name, 
        s.age, 
@@ -18,6 +34,7 @@ void printStudent(Student s) {
        getStudyStatusName(s.status)
     );
 }
+
 
 void printGenderList() {
     printf("\n========== CHỌN GIỚI TÍNH ==========\n");

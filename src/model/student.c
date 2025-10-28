@@ -1,4 +1,13 @@
-#include "../include/student.h"
+#include "../../include/model/student.h"
+#include "../../include/model/gender.h"
+#include "../../include/model/major.h"
+#include "../../include/model/study_status.h"
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int sId= 0;
 
 char *getGenderName(int value) {
     if (value == MALE)
@@ -47,5 +56,10 @@ char *getMajorName(int value) {
 }
 
 char *newId() {
-    return "0000 0000";
+    char *studentId = malloc(sizeof(char) * 9);
+    sprintf(studentId, "%08d", sId);
+
+    sId++;
+
+    return studentId;
 }

@@ -1,16 +1,14 @@
+#include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
+#include <string.h>
 
-#include "../include/student_curd.h"
+#include "../include/service/student_curd.h"
 
 int main() {
-    SetConsoleOutputCP(65001);
-    SetConsoleCP(65001);
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    // run();
     
-    setup();
-    addStudent();
-    printStudentList();
-    endCURD();
-    return 0;
+    return 0;   
 }

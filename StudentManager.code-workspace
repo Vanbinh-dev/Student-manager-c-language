@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.txt": "c",
+			"string_util.h": "c",
+			"error_code.h": "c",
+			"stdbool.h": "c",
+			"student_curd.h": "c",
+			"windows.h": "c",
+			"string.h": "c",
+			"stdio.h": "c",
+			"validation.h": "c",
+			"add_update.h": "c",
+			"_mingw_off_t.h": "c",
+			"student.h": "c",
+			"add_student.h": "c",
+			"cstdlib": "c",
+			"find.h": "c",
+			"print.h": "c"
+		}
+	}
+}
