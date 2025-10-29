@@ -172,7 +172,6 @@ void addStudentToList(Student *student) {
     }
 
     studentList[listSize++] = *student;
-    printf("Đã thêm sinh viên với ID: %s\n", student->id);
     free(student);
 }
 

@@ -10,6 +10,7 @@
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
+    printf("Nếu chương trình không chạy nhấn enter cho nó chạy.\n");
     run();
 
     return 0;   
