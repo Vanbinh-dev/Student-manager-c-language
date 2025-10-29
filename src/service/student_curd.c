@@ -18,6 +18,8 @@
 #include "../../include/helper/input_helper.h"
 #include "../../include/helper/printer.h"
 
+#include "../../include/file/file_control.h"
+
 Student *studentList = NULL;
 int listSize = 0;
 int capacity = 100;
@@ -66,12 +68,14 @@ void init() {
     if (studentList == NULL)
         studentList = malloc(sizeof(Student) * capacity);
     
-    addRawData();
+    // addRawData();
+    loadData("resource/data.txt", &listSize);
     printf("Initialized student list with capacity %d\n", capacity);
 }
 
 void endCURD() {
     printf("Cleaning up student list...\n");
+    saveData("resource/data.txt", studentList, listSize);
 
     if (studentList != NULL) {
         for (int i = 0; i < listSize; i++) {

@@ -51,3 +51,10 @@ short canBeFormatToDouble(char* num) {
 
     return true;
 }
+
+short isLegalContent(char *content) {
+    for (int i = 0; i < strlen(content); i++)
+        if (!isAlpha(content[i]) && !isNumeric(content[i]) && isBlankOrEndl(content[i]))
+            return false;
+    return true;
+}

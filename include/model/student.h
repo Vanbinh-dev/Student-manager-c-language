@@ -20,4 +20,6 @@ typedef struct {
     StudyStatus status;
 } Student;
 
+#define STUDENT_DEFINED_FIELDS 7
+
 #endif

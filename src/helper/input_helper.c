@@ -7,7 +7,7 @@
 #include "../../include/helper/input_helper.h"
 #include "../../include/helper/input_validation.h"
 
-static void removeExtraBuffer() {
+void removeExtraBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }

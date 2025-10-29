@@ -5,10 +5,12 @@
 
 #include "../include/service/student_curd.h"
 
+#include "../include/helper/string_helper.h"
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    // run();
-    
+    run();
+
     return 0;   
 }

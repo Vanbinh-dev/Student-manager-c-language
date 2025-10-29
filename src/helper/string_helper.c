@@ -58,12 +58,27 @@ char** stringSplit(const char *str, char delimiter, int *getSize) {
     return result;
 }
 
+char **notNullStringSplit(const char *str, char dilimiter, int *getSize) {
+    char **baseStringArr = stringSplit(str, dilimiter, getSize);
+    if (baseStringArr == NULL)  
+        return NULL;
+
+    for (int i = 0; i < *getSize; i++) 
+        if (baseStringArr[i] == NULL) {
+            baseStringArr[i] = malloc(sizeof(char));
+            baseStringArr[i][0] = '\0';
+        }
+
+    return baseStringArr;
+}
+
 // Hàm giải phóng bộ nhớ cho kết quả của stringSplit
-void freeStringSplit(char **array, int size) {
+void freeStringArr(char **array, int size) {
     if (array == NULL) return;
     
     for (int i = 0; i < size; i++) {
-        free(array[i]);
+        if (array[i] != NULL)
+            free(array[i]);
     }
     free(array);
 }

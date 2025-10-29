@@ -10,6 +10,11 @@
 #define OVERFLOW_ERROR -6
 
 /**
+ * @return: Gọi ngay sau khi sử dụng fgets để loại bỏ buffer thửa.
+ */
+void removeExtraBuffer();
+
+/**
  * Đọc chuỗi an toàn từ stdin
  * @param buffer: Con trỏ tới con trỏ chuỗi (sẽ được cấp phát bộ nhớ)
  * @param maxLen: Độ dài tối đa (không bao gồm '\0')

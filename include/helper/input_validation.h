@@ -8,4 +8,6 @@ short isBlankOrEndl(char c);
 short canBeFormatToInt(char* num);
 short canBeFormatToDouble(char* num);
 
+short isLegalContent(char *content);
+
 #endif
